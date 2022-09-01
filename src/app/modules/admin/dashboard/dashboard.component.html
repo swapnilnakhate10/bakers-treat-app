@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="mt-2 row">
+        <div class="mt-2 col-sm-2" *ngFor="let tableDetails of tablesList">
+            <div class="card" style="border-radius: 2.25rem;">
+                <div class="card-body">
+                  <h3 class="card-title text-center">
+                      Table {{tableDetails.tableNumber}} 
+                      <span *ngIf="tableDetails.status == 'Available'" class="badge badge-success">A</span>
+                      <span *ngIf="tableDetails.status == 'Occupied'" class="badge badge-warning">N</span>
+                  </h3>
+                  <p class="card-text text-center">
+                    Add or Update order details.
+                  </p>
+                  <button class="btn btn-info" style="border-radius: 1.25rem;" (click)="viewOrderDetails(tableDetails.tableNumber)">
+                      View Order
+                  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

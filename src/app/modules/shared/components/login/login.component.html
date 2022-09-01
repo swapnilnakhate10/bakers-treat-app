@@ -1,0 +1,25 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first m-2">
+        <img src="./../../../../assets/company-logo.jpg" id="icon" alt="The Baker's Treat"/>
+        </div>
+
+        <!-- Login Form -->
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="text" id="email" formControlName="email" class="fadeIn second" 
+            name="email" placeholder="Email" required>
+        <input type="password" id="password" formControlName="password" class="fadeIn third" 
+            name="password" required placeholder="Password">
+        <input type="submit" class="fadeIn fourth" value="Log In" [disabled]="!loginForm.valid">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+        <a class="underlineHover">Copyright @{{currentYear}}</a>
+        </div>
+
+    </div>
+</div>
