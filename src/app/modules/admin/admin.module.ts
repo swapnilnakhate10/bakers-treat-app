@@ -6,6 +6,8 @@ import { AdminComponent } from './admin.component';
 import { AdminHeaderComponent } from './admin-header/admin-header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReviewOrderComponent } from './dashboard/review-order/review-order.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
+import { MenuConfigComponent } from './menu-config/menu-config.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { ReviewOrderComponent } from './dashboard/review-order/review-order.comp
     AdminComponent,
     AdminHeaderComponent,
     DashboardComponent,
-    ReviewOrderComponent
+    ReviewOrderComponent,
+    OrderHistoryComponent,
+    MenuConfigComponent
   ],
   imports: [
     CommonModule,

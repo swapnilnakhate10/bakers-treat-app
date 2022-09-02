@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="m-5 row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header bg-info">
+                    <h5>Orders for Date ( {{currentDate | date: 'mediumDate'}} )</h5>
+                </div>
+                <div class="card-body">
+                    <!-- <div class="row">
+                        <div class="col-xs-4 col-4 col-md-4 form-group">
+                            <input type="text"
+                            class="form-control"
+                            [maxDate]="maxDate"
+                            #dp="bsDatepicker"
+                            bsDatepicker [(bsValue)]="currentDate">
+                        </div>
+                        <div class="col-xs-4 col-4 col-md-4">
+                            <button type="submit" class="btn btn-primary" (click)="getData()">
+                                Submit
+                            </button>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <table class="table table-striped">
+                            <thead class="thead-light">
+                                <th>Sr. No.</th>
+                                <th>Table</th>
+                                <th>Order Date</th>
+                                <th>Bill Date</th>
+                                <th>Payment Mode</th>
+                                <th>Order Status</th>
+                                <th>Bill</th>
+                            </thead>
+                            <tbody class="tbody-default">
+                                <tr *ngFor="let order of todaysOrders; let i = index">
+                                    <td>{{i + 1}}</td>
+                                    <td>Table No. {{order.tableNumber}}</td>
+                                    <td>{{order.createdAt | date:'short'}}</td>
+                                    <td>{{order.updatedAt | date:'short'}}</td>
+                                    <td>{{order.paymentMode}}</td>
+                                    <td>{{order.status}}</td>
+                                    <td>{{order.totalBill}} &#x20B9;</td>
+                                </tr>
+                                <tr *ngIf="todaysOrders.length == 0">
+                                    <td class="text-center" colspan="7">No Sale for this date.</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="table-info">
+                                    <th colspan="6">Total Sale : </th>
+                                    <th colspan="1">{{totalSale ? totalSale : 0 }} &#x20B9;</th>
+                                </tr>
+                            </tfoot>
+                        </table>    
+                    </div>
+                </div>
+            </div>    
+        </div>
+    </div>
+</div>

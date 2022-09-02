@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ReviewOrderComponent } from './dashboard/review-order/review-order.component';
+import { MenuConfigComponent } from './menu-config/menu-config.component';
+import { OrderHistoryComponent } from './order-history/order-history.component';
 
 const routes: Routes = [
   { 
@@ -21,7 +23,15 @@ const routes: Routes = [
       {
         path: 'review-order/:tableId',
         component: ReviewOrderComponent
-      } 
+      },
+      {
+        path: 'order-history',
+        component: OrderHistoryComponent
+      },
+      {
+        path: 'menu-setting',
+        component: MenuConfigComponent
+      }
     ]
   }
 ];
